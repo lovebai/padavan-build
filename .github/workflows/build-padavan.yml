@@ -14,14 +14,14 @@ on:
     - 'v*'
 
 env:                      # 环境变量
-  MHZ:                # CPU超频频率 必须为20的倍数。开启超频请修改124行超频选项
+  MHZ: 1100               # CPU超频频率 必须为20的倍数。开启超频请修改124行超频选项
   TNAME: MZ-R13           # 配置文件名  https://github.com/hanwckf/rt-n56u/tree/master/trunk/configs/templates
   BUILD_VERSION: hanwckf  # hanwckf 或者 chongshengB
   FILE_PATH: /opt/images
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
